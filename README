@@ -1,3 +1,10 @@
+This is an automation tool design to confirm the remote PC is online.
+Using a part of ssh connection to confirm it, just need Ip address.
+*support timing: set the cycle you wanted in the record.json
+*support threading: can test 10000+ ip each 30 minutes
+*support db(use mysql): online IP would be saved to the database you set at record.json 
+
+
 usage:
 # python version 2.7
 1.set the config.json, system configuration and ensure mysql is available
