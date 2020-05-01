@@ -1,0 +1,6 @@
+logs*
+log/__pycache__
+data/AmazonWebService.json
+data/MicrosoftAzureCloud.json
+record*
+*__pycache__

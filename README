@@ -1,0 +1,48 @@
+usage:
+# python version 2.7
+1.set the config.json, system configuration and ensure mysql is available
+2.pip install 
+2.python sshtest.py
+3.pip install -r requirements.txt
+
+
+system configuration:
+
+
+# inorder to let 10000+ threads alive
+
+# add the swap for memory:
+sudo dd if=/dev/zero of=/swapfile bs=1048576 count=4096
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+sudo vim ~/.bashrc
+
+insert:
+    ulimit -s unlimited
+    ulimit -d unlimited
+    ulimit -t unlimited
+    ulimit -v unlimited
+    ulimit -n 12000
+
+source ~/.bashrc
+
+
+about config.json:
+    {   "testnum": "10000",       # test number in each category, ever 2 hours
+        "interval": "3600",       # interval time 3600s
+        "dbconfig":{              # using mysql
+            "table": "sshresult", # table used to save available ips
+            "database": "new_db",
+            "host": "127.0.0.1", 
+            "port": 3306,
+            "user": "root",       # mysql user name
+            "password": "123456"
+        }
+    }
+
+introduction:
+folder data: store the ip and ip_blocks data.
+folder logs: store the logs
+record.json: store the outline about each round of testing
+

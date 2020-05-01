@@ -1,0 +1,11 @@
+{	"testnum": "100",
+	"interval": "30",
+	"dbconfig":{
+		"table": "sshresult",
+		"database": "new_db",
+		"host": "127.0.0.1",
+		"port": 3306,
+		"user": "root",
+		"password": "123456"
+	}
+}
